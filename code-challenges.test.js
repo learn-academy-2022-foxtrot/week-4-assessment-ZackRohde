@@ -50,12 +50,12 @@ const colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "s
 
 // a) Create a test with expect statements for each of the variables provided.
 
-describe("votes", () => {
-  it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
-    expect(votes(votes1)).toEqual(11)
-    expect(votes(votes2)).toEqual(-31)
-  })
-})
+// describe("votes", () => {
+//   it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
+//     expect(votes(votes1)).toEqual(11)
+//     expect(votes(votes2)).toEqual(-31)
+//   })
+// })
 
 // Good Fail!
 // ReferenceError: votes is not defined
@@ -82,12 +82,12 @@ const votes = () => {
 
 // a) Create a test with an expect statement using the variables provided.
 
-describe("noDup", () => {
-  it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
-    expect(noDup(dataArray1)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
-    expect(noDup(dataArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
-  })
-})
+// describe("noDup", () => {
+//   it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
+//     expect(noDup(dataArray1)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+//     expect(noDup(dataArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+//   })
+// })
 
 // Good Fail! 
 //  ReferenceError: noDup is not defined
@@ -96,5 +96,17 @@ const dataArray1 = ["array", "object", "number", "string", "Boolean"]
 const dataArray2 = ["string", "null", "Boolean", "string", "undefined"]
 // Expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
 
-
 // b) Create the function that makes the test pass.
+
+// PSUEDO CODE:
+// Create a function and name it
+// Join the two arrays together .join method or .concat method
+// iterate through the array and return no duplicate values
+// console log to check work
+// yarn jest to confirm pass or fail
+
+const noDup = () => {
+  const joinedArray = dataArray1.concat(dataArray2)
+  return joinedArray
+}
+console.log(joinedArray)
