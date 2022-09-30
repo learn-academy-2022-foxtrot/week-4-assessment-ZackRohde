@@ -16,12 +16,12 @@
 // a) Create a test with an expect statement using the variable provided. 
 // HINT: Check out this resource: https://jestjs.io/docs/expect#expectarraycontainingarray
 
-describe("shuffleArray", () => {
-  it("takes in an array, removes the first item from the array and shuffles the remaining content.", () => {
-    expect(shuffleArray(colors1)).toEqual(expect.arrayContaining["yellow", "blue", "pink", "green"])
-    expect(shuffleArray(colors2)).toEqual(expect.arrayContaining["saffron", "aquamarine", "periwinkle", "indigo", "ochre"])
-  })
-})
+// describe("shuffleArray", () => {
+//   it("takes in an array, removes the first item from the array and shuffles the remaining content.", () => {
+//     expect(shuffleArray(colors1)).toEqual(expect.arrayContaining["yellow", "blue", "pink", "green"])
+//     expect(shuffleArray(colors2)).toEqual(expect.arrayContaining["saffron", "aquamarine", "periwinkle", "indigo", "ochre"])
+//   })
+// })
 
 // Good Fail!
 // ReferenceError: shuffleArray is not defined
@@ -40,28 +40,57 @@ const colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "s
 // console log to check if it's working through node 
 // yarn jest to test my pass or fail
 
-const shuffleArray = () => {
-  let shuffledArray = colors1.sort(() => Math.random() - 0.5)
-  return colors1.slice(1, 5)
-}
-console.log(shuffleArray(colors1))
+// const shuffleArray = () => {
+//   let shuffledArray = colors1.sort(() => Math.random() - 0.5)
+//   return colors1.slice(1, 5)
+// }
+// console.log(shuffleArray(colors1))
 
 // --------------------2) Create a function that takes in an object that contains up votes and down votes and returns the net total of votes.
 
 // a) Create a test with expect statements for each of the variables provided.
+
+describe("votes", () => {
+  it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
+    expect(votes(votes1)).toEqual(11)
+    expect(votes(votes2)).toEqual(-31)
+  })
+})
+
+// Good Fail!
+// ReferenceError: votes is not defined
 
 const votes1 = { upVotes: 13, downVotes: 2 }
 // Expected output: 11
 const votes2 = { upVotes: 2, downVotes: 33 }
 // Expected output: -31
 
-
 // b) Create the function that makes the test pass.
 
+// PSUEDO CODE:
+// Create a function named votes
+// I believe I should create a conditional statement that counts the votes and then totals them together
+// I would need a variable that starts a counter at 0
+// console log to check work
+// run yarn jest to test my pass or fail
+
+const votes = () => {
+  let counter = 0
+}
 
 // --------------------3) Create a function that takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.
 
 // a) Create a test with an expect statement using the variables provided.
+
+describe("noDup", () => {
+  it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
+    expect(noDup(dataArray1)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+    expect(noDup(dataArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+  })
+})
+
+// Good Fail! 
+//  ReferenceError: noDup is not defined
 
 const dataArray1 = ["array", "object", "number", "string", "Boolean"]
 const dataArray2 = ["string", "null", "Boolean", "string", "undefined"]
