@@ -1,5 +1,5 @@
 # ASSESSMENT 4: Ruby Coding Practical Questions
-# MINASWAN ✌️
+# MINASWAN 
 
 # --------------------1) Create a method that takes in a number and determines if the number is even or odd. Use the test variables provided.
 
@@ -38,7 +38,14 @@ beatles_album2 = 'Sgt Pepper'
 beatles_album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
+def no_vowels (string)
+  string_array = string.split('')
+  string_array.delete('a','e','i','o','u')
+  string_array.join('')
+end
+p no_vowels
 
+# I know I'm missing something that connects the beatles albumns to my code... I don't know what.. 
 
 # -------------------3) Create a method that takes in a string and checks if the string is a palindrome. A palindrome is the same word spelled forward or backward. Use the test variables provided.
 
@@ -48,3 +55,15 @@ palindrome_tester2 = 'LEARN'
 # Expected output: 'LEARN is not a palindrome'
 palindrome_tester3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
+
+
+def valid_palindrome string
+  if string == string.reverse
+      true
+  else 
+      false
+  end
+end
+p palindrome_tester1
+p palindrome_tester2
+p palindrome_tester3
