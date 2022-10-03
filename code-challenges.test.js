@@ -16,12 +16,12 @@
 // a) Create a test with an expect statement using the variable provided. 
 // HINT: Check out this resource: https://jestjs.io/docs/expect#expectarraycontainingarray
 
-// describe("shuffleArray", () => {
-//   it("takes in an array, removes the first item from the array and shuffles the remaining content.", () => {
-//     expect(shuffleArray(colors1)).toEqual(expect.arrayContaining["yellow", "blue", "pink", "green"])
-//     expect(shuffleArray(colors2)).toEqual(expect.arrayContaining["saffron", "aquamarine", "periwinkle", "indigo", "ochre"])
-//   })
-// })
+describe("shuffleArray", () => {
+  it("takes in an array, removes the first item from the array and shuffles the remaining content.", () => {
+    expect(shuffleArray(colors1)).toEqual(expect.arrayContaining["yellow", "blue", "pink", "green"])
+    expect(shuffleArray(colors2)).toEqual(expect.arrayContaining["saffron", "aquamarine", "periwinkle", "indigo", "ochre"])
+  })
+})
 
 // Good Fail!
 // ReferenceError: shuffleArray is not defined
@@ -40,22 +40,22 @@ const colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "s
 // console log to check if it's working through node 
 // yarn jest to test my pass or fail
 
-// const shuffleArray = () => {
-//   let shuffledArray = colors1.sort(() => Math.random() - 0.5)
-//   return colors1.slice(1, 5)
-// }
-// console.log(shuffleArray(colors1))
+const shuffleArray = () => {
+  let shuffledArray = colors1.sort(() => Math.random() - 0.5)
+  return colors1.slice(1, 5)
+}
+console.log(shuffleArray(colors1))
 
 // --------------------2) Create a function that takes in an object that contains up votes and down votes and returns the net total of votes.
 
 // a) Create a test with expect statements for each of the variables provided.
 
-// describe("votes", () => {
-//   it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
-//     expect(votes(votes1)).toEqual(11)
-//     expect(votes(votes2)).toEqual(-31)
-//   })
-// })
+describe("votes", () => {
+  it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
+    expect(votes(votes1)).toEqual(11)
+    expect(votes(votes2)).toEqual(-31)
+  })
+})
 
 // Good Fail!
 // ReferenceError: votes is not defined
@@ -82,12 +82,12 @@ const votes = () => {
 
 // a) Create a test with an expect statement using the variables provided.
 
-// describe("noDup", () => {
-//   it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
-//     expect(noDup(dataArray1)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
-//     expect(noDup(dataArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
-//   })
-// })
+describe("noDup", () => {
+  it("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
+    expect(noDup(dataArray1)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+    expect(noDup(dataArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+  })
+})
 
 // Good Fail! 
 //  ReferenceError: noDup is not defined
